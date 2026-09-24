@@ -1,0 +1,2 @@
+# Disables Jekyll on GitHub Pages so directories starting with "_" (like _next)
+# are served. Harmless when deploying via GitHub Actions (no Jekyll there).

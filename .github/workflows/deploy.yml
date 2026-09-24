@@ -32,6 +32,12 @@ jobs:
 
       - name: Static build
         run: npm run build
+        env:
+          # Bakes the correct asset prefix for ANY repo name/casing
+          NEXT_BASE_PATH: /${{ github.event.repository.name }}
+
+      - name: Ensure .nojekyll
+        run: touch out/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
